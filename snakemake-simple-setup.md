@@ -8,8 +8,8 @@ mamba create -q -y -c conda-forge -c bioconda -n snakemake snakemake snakemake-m
 . ./mambaforge.dir/etc/profile.d/conda.sh
 . ./mambaforge.dir/etc/profile.d/mamba.sh 
 mamba activate snakemake
-mamba install -c bioconda bwa
-mamba install -c bioconda samtools
+mamba install -y -c bioconda bwa
+mamba install -y -c bioconda samtools
 
 curl -L https://github.com/snakemake/snakemake-tutorial-data/archive/v5.24.1.tar.gz -o snakemake-tutorial-data.tar.gz
 tar --wildcards -xf snakemake-tutorial-data.tar.gz --strip 1 "*/data" "*/environment.yaml"
